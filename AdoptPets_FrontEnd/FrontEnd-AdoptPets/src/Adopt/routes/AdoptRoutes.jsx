@@ -3,6 +3,7 @@ import {Navbar} from '../../ui/components';
 import {Solicitud} from '../pages'
 import { Contact } from "../pages";
 import { Comentario } from "../pages";
+import { HomePage } from "../components/HomePage";
 export const AdoptRoutes =()=>{
     return (
         <>
@@ -11,6 +12,7 @@ export const AdoptRoutes =()=>{
                <Route path="solicitud" element={<Solicitud/>}/>
                <Route path="contact" element={<Contact/>}/>
                <Route path="comentario" element={<Comentario/>}/>
+               <Route path="Home" element={<HomePage/>}/>
 
            </Routes>
         </>
