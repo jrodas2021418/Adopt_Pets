@@ -25,6 +25,10 @@ const mascotasSchema = Schema({
         type: String,
         required: true,
     },
+    Imagen:{
+        type: String,
+        required: true
+    }
 });
 
 module.exports = mongoose.model('mascota', mascotasSchema)
