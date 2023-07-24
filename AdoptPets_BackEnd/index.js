@@ -12,6 +12,7 @@ connection();
 app.use(express.urlencoded({extended:false}))
 app.use(express.json());
 
+app.use('/public', express.static(`${__dirname}/src/imgs`))
 app.use('/api', Mascota);
 
 app.listen(port, () =>{

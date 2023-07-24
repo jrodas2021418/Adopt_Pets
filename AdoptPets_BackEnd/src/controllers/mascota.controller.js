@@ -4,14 +4,10 @@ const Mascota = require('../models/Mascotas');
 const addPet = async (req, res) => {
     try {
         let pet = new Mascota();
-        pet.Raza = req.body.raza;
-        pet.Peso = req.body.peso;
-        pet.Genero = req.body.genero;
-        pet.Estado = req.body.estado;
-        pet.TipodeMascota = req.body.tipo;
-        // Verificar si hay una imagen adjunta en la solicitud
+        pet = new Mascota(req.body);
         if (req.file) {
-            pet.Imagen = req.file.filename; // Guardar el nombre del archivo en el campo "Imagen"
+            const { filename }= req.file
+            pet.setImagen(filename)
         }
         pet = await pet.save();
         res.status(200).send({ msg: 'Se creó correctamente', pet });

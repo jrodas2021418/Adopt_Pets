@@ -19,7 +19,7 @@ const mascotasSchema = Schema({
     Estado: {
         type: String,
         required: true,
-        enum: ['En adopcion']
+        enum: ['En Adopcion']
     },
     TipodeMascota: {
         type: String,
@@ -27,8 +27,12 @@ const mascotasSchema = Schema({
     },
     Imagen:{
         type: String,
-        required: true
+        required: false,
     }
 });
+
+mascotasSchema.methods.setImagen = function Imagen( filename ){
+    this.Imagen = `localhost:3000/public/${filename}`
+}
 
 module.exports = mongoose.model('mascota', mascotasSchema)
