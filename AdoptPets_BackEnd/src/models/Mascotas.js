@@ -32,7 +32,7 @@ const mascotasSchema = Schema({
 });
 
 mascotasSchema.methods.setImagen = function Imagen( filename ){
-    this.Imagen = `localhost:3000/public/${filename}`
+    this.Imagen = `http://localhost:3000/public/${filename}`
 }
 
 module.exports = mongoose.model('mascota', mascotasSchema)
