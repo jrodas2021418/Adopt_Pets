@@ -90,3 +90,21 @@ header .nav-btn{
        
     
 }
+
+
+/* Estilos para el logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 60px; /* Ajusta el tamaño de la imagen del logo según tu necesidad */
+    height: 60px; /* Ajusta el tamaño de la imagen del logo según tu necesidad */
+    margin-right: 10px; /* Agrega un margen a la derecha para separar el logo del texto */
+  }
+  
+  .logo-container h3 {
+    font-size: 20px; /* Ajusta el tamaño del texto del logo según tu necesidad */
+    color: var(--textColor); /* Usa el color del texto definido en :root */
+  }
